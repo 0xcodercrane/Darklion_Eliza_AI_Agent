@@ -57,7 +57,7 @@ export default function Sidebar() {
           isSidebarOpen ? "w-64" : "w-16"
         } flex-col bg-gray-800 text-white transition-all duration-300`}
       >
-        <div className="p-4 flex gap-4 items-center">
+        <div className="p-4 flex gap-4 items-center overflow-hidden h-[74px]">
           <div className=" rounded-full overflow-hidden flex-shrink-0">
             <Image
               src="https://cdn.discordapp.com/icons/1324428871646314586/0c6e1be4c34834929e589501318afc24.webp?size=96"
