@@ -62,7 +62,8 @@ function Deploy() {
     // TODO: Implement deployment logic
     console.log("Deploying character:", formData);
   };
-  const labelStyle = "block font-medium text-lg text-gray-700 dark:text-gray-300 mb-2";
+  const labelStyle =
+    "block font-medium text-lg text-gray-700 dark:text-gray-300 mb-2";
 
   return (
     <div className="container mx-auto py-8">
@@ -79,7 +80,9 @@ function Deploy() {
             {/* Basic Information */}
             <div className="space-y-4">
               <div>
-                <Label htmlFor="name" className={labelStyle}>Character Name</Label>
+                <Label htmlFor="name" className={labelStyle}>
+                  Character Name
+                </Label>
                 <Input
                   id="name"
                   value={formData.name}
@@ -104,7 +107,9 @@ function Deploy() {
 
               {/* Character Background */}
               <div>
-                <Label htmlFor="bio" className={labelStyle}>Character Bio</Label>
+                <Label htmlFor="bio" className={labelStyle}>
+                  Character Bio
+                </Label>
                 <Textarea
                   id="bio"
                   className="bg-transparent"
@@ -123,7 +128,9 @@ function Deploy() {
               </div>
 
               <div>
-                <Label htmlFor="lore" className={labelStyle}>Character Lore</Label>
+                <Label htmlFor="lore" className={labelStyle}>
+                  Character Lore
+                </Label>
                 <Textarea
                   id="lore"
                   className="bg-transparent"
@@ -143,7 +150,9 @@ function Deploy() {
 
               {/* Character Traits */}
               <div>
-                <Label htmlFor="knowledge" className={labelStyle}>Knowledge & Skills</Label>
+                <Label htmlFor="knowledge" className={labelStyle}>
+                  Knowledge & Skills
+                </Label>
                 <Textarea
                   id="knowledge"
                   className="bg-transparent"
@@ -162,7 +171,9 @@ function Deploy() {
               </div>
 
               <div>
-                <Label htmlFor="postExamples" className={labelStyle}>Post Examples</Label>
+                <Label htmlFor="postExamples" className={labelStyle}>
+                  Post Examples
+                </Label>
                 <Textarea
                   id="postExamples"
                   className="bg-transparent"
@@ -180,7 +191,9 @@ function Deploy() {
                 />
               </div>
               <div>
-                <Label htmlFor="topics" className={labelStyle}>Topics</Label>
+                <Label htmlFor="topics" className={labelStyle}>
+                  Topics
+                </Label>
                 <Textarea
                   id="topics"
                   className="bg-transparent"
@@ -197,71 +210,75 @@ function Deploy() {
                 />
               </div>
               <div>
-                <div>
-                  <Label htmlFor="styleAll" className={labelStyle}>Style-ALL(line-by-line)</Label>
-                  <Textarea
-                    id="styleAll"
-                    className="bg-transparent"
-                    value={formData.style.all.join("\n")}
-                    onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
-                      setFormData({
-                        ...formData,
-                        style: {
-                          ...formData.style,
-                          all: e.target.value
-                            .split("\n")
-                            .filter((line: string) => line.trim()),
-                        },
-                      })
-                    }
-                    placeholder={placeholder.style.all.join("\n")}
-                    rows={15}
-                  />
-                </div>
+                <Label htmlFor="styleAll" className={labelStyle}>
+                  Style-ALL(line-by-line)
+                </Label>
+                <Textarea
+                  id="styleAll"
+                  className="bg-transparent"
+                  value={formData.style.all.join("\n")}
+                  onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
+                    setFormData({
+                      ...formData,
+                      style: {
+                        ...formData.style,
+                        all: e.target.value
+                          .split("\n")
+                          .filter((line: string) => line.trim()),
+                      },
+                    })
+                  }
+                  placeholder={placeholder.style.all.join("\n")}
+                  rows={15}
+                />
+              </div>
 
-                <div>
-                  <Label htmlFor="styleChat" className={labelStyle}>Style-CHAT(line-by-line)</Label>
-                  <Textarea
-                    id="styleChat"
-                    className="bg-transparent"
-                    value={formData.style.chat.join("\n")}
-                    onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
-                      setFormData({
-                        ...formData,
-                        style: {
-                          ...formData.style,
-                          chat: e.target.value
-                            .split("\n")
-                            .filter((line: string) => line.trim()),
-                        },
-                      })
-                    }
-                    placeholder={placeholder.style.chat.join("\n")}
-                    rows={15}
-                  />
-                </div>
+              <div>
+                <Label htmlFor="styleChat" className={labelStyle}>
+                  Style-CHAT(line-by-line)
+                </Label>
+                <Textarea
+                  id="styleChat"
+                  className="bg-transparent"
+                  value={formData.style.chat.join("\n")}
+                  onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
+                    setFormData({
+                      ...formData,
+                      style: {
+                        ...formData.style,
+                        chat: e.target.value
+                          .split("\n")
+                          .filter((line: string) => line.trim()),
+                      },
+                    })
+                  }
+                  placeholder={placeholder.style.chat.join("\n")}
+                  rows={15}
+                />
+              </div>
 
-                <div>
-                  <Label htmlFor="stylePost" className={labelStyle}>Style-POST(line-by-line)</Label>
-                  <Textarea
-                    id="stylePost"
-                    className="bg-transparent"
-                    value={formData.style.post.join("\n")}
-                    onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
-                      setFormData({
-                        ...formData,
-                        style: {
-                          ...formData.style,
-                          post: e.target.value
-                            .split("\n")
-                            .filter((line: string) => line.trim()),
-                        },
-                      })
-                    }
-                    placeholder={placeholder.style.post.join("\n")}
-                    rows={15}
-                  />
-                </div>
+              <div>
+                <Label htmlFor="stylePost" className={labelStyle}>
+                  Style-POST(line-by-line)
+                </Label>
+                <Textarea
+                  id="stylePost"
+                  className="bg-transparent"
+                  value={formData.style.post.join("\n")}
+                  onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
+                    setFormData({
+                      ...formData,
+                      style: {
+                        ...formData.style,
+                        post: e.target.value
+                          .split("\n")
+                          .filter((line: string) => line.trim()),
+                      },
+                    })
+                  }
+                  placeholder={placeholder.style.post.join("\n")}
+                  rows={15}
+                />
               </div>
               <div>
                 <Label htmlFor="adjectives" className={labelStyle}>
@@ -284,40 +301,45 @@ function Deploy() {
                 />
               </div>
               <div>
-                <Label htmlFor="messageExamples" className={labelStyle}>Message Examples</Label>
+                <Label htmlFor="messageExamples" className={labelStyle}>
+                  Message Examples
+                </Label>
                 <Textarea
                   id="messageExamples"
-                  className="bg-transparent" 
-                  value={formData.messageExamples?.map(example => 
-                    example.map(msg => 
-                      `${msg.user}: ${msg.content.text}`
-                    ).join('\n')
-                  ).join('\n\n')}
+                  className="bg-transparent"
+                  value={formData.messageExamples
+                    ?.map((example) =>
+                      example
+                        .map((msg) => `${msg.user}: ${msg.content.text}`)
+                        .join("\n")
+                    )
+                    .join("\n\n")}
                   onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
                     setFormData({
                       ...formData,
                       messageExamples: e.target.value
-                        .split('\n\n')
-                        .map(example => 
-                          example.split('\n')
-                            .map(line => {
-                              const [user, ...contentParts] = line.split(': ');
-                              return {
-                                user,
-                                content: {
-                                  text: contentParts.join(': ')
-                                }
-                              };
-                            })
+                        .split("\n\n")
+                        .map((example) =>
+                          example.split("\n").map((line) => {
+                            const [user, ...contentParts] = line.split(": ");
+                            return {
+                              user,
+                              content: {
+                                text: contentParts.join(": "),
+                              },
+                            };
+                          })
                         )
-                        .filter(example => example.length > 0)
+                        .filter((example) => example.length > 0),
                     })
                   }
-                  placeholder={placeholder.messageExamples?.map(example =>
-                    example.map(msg =>
-                      `${msg.user}: ${msg.content.text}`
-                    ).join('\n')
-                  ).join('\n\n')}
+                  placeholder={placeholder.messageExamples
+                    ?.map((example) =>
+                      example
+                        .map((msg) => `${msg.user}: ${msg.content.text}`)
+                        .join("\n")
+                    )
+                    .join("\n\n")}
                   rows={15}
                 />
               </div>
