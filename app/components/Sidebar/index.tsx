@@ -54,7 +54,7 @@ export default function Sidebar() {
     <div className="relative h-full border-r border-gray-700">
       <aside
         className={`flex h-full ${
-          isSidebarOpen ? "w-64" : "w-16"
+          isSidebarOpen ? "w-64" : "w-18"
         } flex-col bg-gray-800 text-white transition-all duration-300`}
       >
         <div className="p-4 flex gap-4 items-center overflow-hidden h-[74px]">
@@ -91,7 +91,6 @@ export default function Sidebar() {
             ))}
           </ul>
         </nav>
-        {/* Toggle Button */}
         <button
           onClick={() => setIsSidebarOpen(!isSidebarOpen)}
           className="absolute -right-3 top-4 rounded-full bg-gray-800 p-1 text-white border border-gray-700"

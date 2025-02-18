@@ -33,7 +33,7 @@ export default function RootLayout({
         <div className="flex-1 flex flex-col overflow-hidden relative">
           <Header />
           <main className="flex-1 overflow-auto relative mt-[73px]">
-            <div className="h-full rounded-lg p-6 shadow-sm">
+            <div className="h-full rounded-lg p-2 sm:p-6 shadow-sm">
               {children}
             </div>
           </main>
