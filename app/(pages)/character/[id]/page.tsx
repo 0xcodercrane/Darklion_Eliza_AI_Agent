@@ -1,5 +1,5 @@
-import { Card } from "@/app/components/Card";
-import { Badge } from "@/app/components/Badge";
+import { Card } from "@/app/components/UI/Card";
+import { Badge } from "@/app/components/UI/Badge";
 import Image from "next/image";
 
 interface CharacterData {
